@@ -34,9 +34,7 @@ Serial.begin(115200);
 void loop(){
 
   
-  val = analogRead(3) / 8; // read value of potentiometer 1 BLUE
-//Serial.write(60, val, 1); // MIDI control change; channel 1
-//Serial.write(val); // MIDI controller value from potentiometer 1
+val = analogRead(3) / 8; // read value of potentiometer 1 BLUE
 MIDI.sendNoteOn(15,val,1);
 delay(10);
 
